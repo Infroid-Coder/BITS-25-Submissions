@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background: black;
+        }
+        #cover{
+            height: 93vh;
+            display: grid;
+        }
+        #link-holder{
+            margin: auto;
+            width: 50vw;
+            height: 50vh;
+            background: rgb(31, 31, 31);
+            border-radius: 25px;
+            display: grid;
+            grid-template-columns: 30px 1fr 30px;
+        }
+        #next, #prev{
+            font-weight: 900;
+            font-size: 20px;
+            background: rgb(0, 187, 115);
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+    </style>
+    <title>Bits'25 Submissions | Infroid Coder</title>
+</head>
+<body>
+    <div id="cover">
+        <div id="link-holder">
+            <button id="prev">⟨</button>
+            <div id="links"></div>
+            <button id="next">⟩</button>
+        </div>
+    </div>
+
+    <script>
+        fetch("./solved.json")
+        .then(val => val.json())
+        .then(solved => {
+            let i = 0;
+
+            if(solved[i]){
+                let link = document.createElement("a");
+                link.id = "problem-link";
+                
+            }
+        });
+    </script>
+</body>
+</html>
