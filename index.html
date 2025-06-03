@@ -15,10 +15,10 @@
             margin: auto;
             width: 50vw;
             height: 50vh;
-            background: rgb(31, 31, 31);
             border-radius: 25px;
             display: grid;
-            grid-template-columns: 30px 1fr 30px;
+            grid-template-columns: 60px 1fr 60px;
+            grid-gap: 20px;
         }
         #next, #prev{
             font-weight: 900;
@@ -27,6 +27,71 @@
             color: white;
             cursor: pointer;
             border: none;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            margin: auto;
+            display: grid;
+            padding: 0px;
+        }
+        #next span, #prev span{
+            margin: auto;
+        }
+        #problem-id{
+            color: white;
+            text-align: center;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #solution-hlink, #solution-glink{
+            margin:0 auto;
+            width: 80%;
+            display: block;
+        }
+        #to-solution, #to-code{
+            margin: auto;
+            padding: 7px 25px;
+            font-size: 16px;
+            color: white;
+            font-weight: 700;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border-radius: 10px;
+            border: none;
+            background: rgb(0, 150, 255);
+            width: 100%;
+        }
+        #details{
+            background: rgb(31, 31, 31);
+            display: grid;
+        }
+        #detail-card{
+            display:grid;
+            width: 100%;
+            margin: auto;
+        }
+        #btn-set{
+            margin: 0 auto;
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 20px;
+            grid-gap: 20px;
+        }
+        .detail-entry{
+            display: grid;
+            grid-template-columns: max-content max-content;
+            grid-column-gap: 10px;
+            margin-left: 20px;
+        }
+        .detail-label, .detail{
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 16px;
+        }
+        .detail-label{
+            font-weight: 700;
+        }
+        .detail a{
+            color: white;
         }
     </style>
     <title>Bits'25 Submissions | Infroid Coder</title>
@@ -34,22 +99,50 @@
 <body>
     <div id="cover">
         <div id="link-holder">
-            <button id="prev">⟨</button>
-            <div id="links"></div>
-            <button id="next">⟩</button>
+            <div id="prev">
+                <span>⟨</span>
+            </div>
+            <div id="details"></div>
+            <div id="next">
+                <span>⟩</span>
+            </div>
         </div>
     </div>
 
     <script>
+        function generateElem(obj){
+            let template = `<div id="detail-card">
+                <span class="detail-entry">
+                    <p class="detail-label" id="pid-label">Problem ID: </p>
+                    <p class="detail" id="pid">${obj.problem}</p>
+                </span>
+                <span class="detail-entry">
+                    <p class="detail-label" id="name-label">Problem Title: </p>
+                    <p class="detail" id="name">${obj.problem_name}</p>
+                </span>
+                <span class="detail-entry">
+                    <p class="detail-label" id="name-label">Problem URL: </p>
+                    <p class="detail" id="name"><a href="${obj.problem_name}">Click Here</a></p>
+                </span>
+                <div id="btn-set">
+                    <a id="solution-hlink" href="./${obj.path}">
+                        <button id="to-solution">Solution</button>
+                    </a>
+                    <a id="solution-glink" href="${obj.github}">
+                        <button id="to-code">Code</button>
+                    </a>
+                </div>
+            </div>`;
+            return template;
+        }
         fetch("./solved.json")
         .then(val => val.json())
-        .then(solved => {
+        .then(obj => {
             let i = 0;
-
-            if(solved[i]){
-                let link = document.createElement("a");
-                link.id = "problem-link";
-                
+            let solved = obj[i];
+            if(solved){
+                let detailElem = generateElem(solved);
+                document.getElementById("details").innerHTML = detailElem;
             }
         });
     </script>
