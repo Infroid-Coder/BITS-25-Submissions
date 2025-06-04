@@ -3,7 +3,7 @@
         "problem": "C02",
         "problem_name": "Write a program to count the Vowels",
         "problem_url": "https://bits.acicts.lk/task/200",
-        "path": "/C02/index.html",
-        "github": "https://github.com/Infroid-Coder/BITS-25-Submissions/tree/main/C02"
+        "solution": "./C02/index.html",
+        "source": "https://github.com/Infroid-Coder/BITS-25-Submissions/tree/main/C02"
     }
 ]
