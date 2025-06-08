@@ -19,5 +19,19 @@
         "problem_url": "https://bits.acicts.lk/task/400",
         "solution": "./C04/index.html",
         "source": "https://github.com/Infroid-Coder/BITS-25-Submissions/tree/main/C04"
+    },
+    {
+        "problem": "D09",
+        "problem_name": "Create a logo for an automobile company",
+        "problem_url": "https://bits.acicts.lk/task/900",
+        "solution": "https://drive.google.com/file/d/16yDnd05k2HnfOw0ZCxJ_mg45KKuWomL5/view?usp=sharing",
+        "source": "https://drive.google.com/drive/folders/1T5uiOtQSR6GxGHg5BXlmrfHrD2DqQ8ZS?usp=sharing"
+    },
+    {
+        "problem": "D06",
+        "problem_name": "Create a loading Screen for a Game",
+        "problem_url": "https://bits.acicts.lk/task/600",
+        "solution": "https://drive.google.com/file/d/1RjZLpdGzsfXI_UM2VpjVm-uZ8BxCr1jt/view?usp=sharing",
+        "source": "https://drive.google.com/drive/folders/136HB2WwbqYjkuNGpY3PJiFGObzvjnfto?usp=sharing"
     }
 ]
