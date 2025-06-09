@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="calculator, simple, cal, mathematics, ">
+    <meta name="description" content="A simple calculator to perform day-to-day calculations.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <div id="align-cal-box">
+        <div id="cal-box">
+            <div id="cal-items">
+                <div id="input-div">
+                    <input type="text" disabled id="previous-entry"><br>
+                    <input type="text" id="input" disabled>
+                </div>
+                <div id="buttons-div">
+                    <button class="btns" id="cleare">CE</button>
+                    <button class="btns" id="clear">C</button>
+                    <button class="btns" id="backspace">⌫</button>
+                    <button class="btns basic-operation" id="add">+</button>
+                    <button class="btns" id="1">1</button>
+                    <button class="btns" id="2">2</button>
+                    <button class="btns" id="3">3</button>
+                    <button class="btns basic-operation" id="subs">-</button>
+                    <button class="btns" id="4">4</button>
+                    <button class="btns" id="5">5</button>
+                    <button class="btns" id="6">6</button>
+                    <button class="btns basic-operation" id="mult">×</button>
+                    <button class="btns" id="7">7</button>
+                    <button class="btns" id="8">8</button>
+                    <button class="btns" id="9">9</button>
+                    <button class="btns basic-operation" id="div">÷</button>
+                    <div class="btns" id="functions">
+                        <button class="btns" id="square">x<sup>2</sup></button>
+                        <button class="btns basic-operation" id="power">x<sup>n</sup></button>
+                        <button class="btns basic-operation" id="modulus">%</button>
+                        <button class="btns" id="sqrt">√</button>
+                    </div>
+                    <button class="btns" id="0">0</button>
+                    <button class="btns" id="dec">•</button>
+                    <button class="btns" id="equals">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="alert-box">
+        <p id="alert-desc">All errors will appear here</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

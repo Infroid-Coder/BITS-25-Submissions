@@ -1,0 +1,134 @@
+body{
+    background: black;
+}
+#cal-box{
+    margin: 0 auto;
+    padding: 25px;
+    padding-top: 35px;
+    border: solid 1px rgb(120, 120, 120);
+    display: inline-block;
+    border-radius: 10px;
+    margin-top: 3%;
+    background: #232528;
+}
+#cal-items{
+    text-align: center;
+}
+#buttons-div{
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: repeat(5, 60px);
+    grid-gap: 10px;
+    margin: 0 auto;
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+#buttons-div button{
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.274);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+#buttons-div button:hover{
+    background: rgba(0, 0, 0, 0.164);
+}
+#buttons-div button:active{
+    background: rgba(0, 0, 0, 0.315);
+}
+#input-div{
+    margin-bottom: 15px;
+}
+#previous-entry{
+    padding: 5px 7px;
+    font-size: 15px;
+    width: 90%;
+    display: inline-block;
+    border: none;
+    background: rgba(255, 164, 0, .5);
+    color: white;
+}
+#input{
+    padding: 13px 7px;
+    font-size: 20px;
+    width: 90%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    background: rgb(0, 0, 0);
+    color: white;
+}
+#align-cal-box{
+    text-align: center;
+}
+#functions{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: 
+    "sqrt modulus"
+    "square power";
+    grid-gap: 2px;
+}
+#modulus{
+    grid-area: modulus;
+}
+#square{
+    grid-area: square;
+}
+#sqrt{
+    grid-area: sqrt;
+}
+#power{
+    grid-area: power;
+}
+#functions button{
+    width: 95%;
+    height: 100%;
+    font-size: 15px;
+}
+#equals{
+    background: rgb(42, 42, 114) !important;
+    
+}
+#equals:hover{
+    background: rgba(42, 42, 114, 0.603) !important;
+}
+#equals:active{
+    background: rgb(42, 42, 114) !important;
+}
+#alert-box{
+    display: grid;
+    background: rgb(0, 146, 71);
+    width: 250px;
+    height:min-content;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-family: Arial;
+    font-size: 17px;
+    text-align: center;
+    position: fixed;
+    top: 20px;
+    left: -300px;
+    animation-name: alertboxin;
+    animation-duration: .4s;
+}
+#alert-desc{
+    margin: auto;
+    padding: 0px;
+}
+
+@keyframes alertBoxIn{
+    100%{
+        left: 10px;
+    }
+}
+@keyframes alertBoxOut{
+    100%{
+        left: -300px;
+    }
+}
