@@ -33,5 +33,12 @@
         "problem_url": "https://bits.acicts.lk/task/600",
         "solution": "https://drive.google.com/file/d/1RjZLpdGzsfXI_UM2VpjVm-uZ8BxCr1jt/view?usp=sharing",
         "source": "https://drive.google.com/drive/folders/136HB2WwbqYjkuNGpY3PJiFGObzvjnfto?usp=sharing"
+    },
+    {
+        "problem": "C18",
+        "problem_name": "Basic Calculator",
+        "problem_url": "https://bits.acicts.lk/task/1800",
+        "solution": "./C18/index.html",
+        "source": "https://github.com/Infroid-Coder/BITS-25-Submissions/tree/main/C18"
     }
 ]
