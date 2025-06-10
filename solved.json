@@ -41,4 +41,11 @@
         "solution": "./C18/index.html",
         "source": "https://github.com/Infroid-Coder/BITS-25-Submissions/tree/main/C18"
     }
+    {
+        "problem": "C17",
+        "problem_name": "Random Quote Generator",
+        "problem_url": "https://bits.acicts.lk/task/1700",
+        "solution": "./C17/index.html",
+        "source": "https://github.com/Infroid-Coder/BITS-25-Submissions/tree/main/C17"
+    }
 ]
