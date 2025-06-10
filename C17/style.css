@@ -1,18 +1,14 @@
 @font-face{
-    font-family: Astonpoliz;
-    src: url(./fonts/Astonpoliz.ttf);
-}
-@font-face{
     font-family: Roboto;
     src: url(./fonts/Roboto-Regular.ttf);
 }
 
 body{
-    background: black;
+    background: linear-gradient(-45deg, black, rgb(0, 61, 80));
 }
 #qbox-container{
     display: grid;
-    height: 90vh;
+    height: 97.5vh;
 }
 #quote-box{
     display: grid;
@@ -29,7 +25,6 @@ body{
 }
 #quote-wrapper{
     display: grid;
-    /* grid-template-columns: repeat(4, 1fr); */
     width: 95%;
     margin: auto;
     color: rgb(216, 216, 216);
@@ -40,15 +35,12 @@ body{
 }
 #quote{
     text-align: center;
-    /* grid-column: span 4; */
     font-style: italic;
     margin: 0px;
     width: 95%;
     margin: auto;
 }
 #author{
-    /* grid-column: 4; */
-    /* text-align: center; */
     font-weight: 100;
     margin: 0px;
     margin-top: 20px;
