@@ -47,5 +47,12 @@
         "problem_url": "https://bits.acicts.lk/task/1700",
         "solution": "./C17/index.html",
         "source": "https://github.com/Infroid-Coder/BITS-25-Submissions/tree/main/C17"
+    },
+    {
+        "problem": "C03",
+        "problem_name": "Design a personal portfolio web page",
+        "problem_url": "https://bits.acicts.lk/task/300",
+        "solution": "./C03/index.html",
+        "source": "https://github.com/Infroid-Coder/BITS-25-Submissions/tree/main/C03"
     }
 ]
