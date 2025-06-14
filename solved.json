@@ -61,5 +61,12 @@
         "problem_url": "https://bits.acicts.lk/task/2400",
         "solution": "https://drive.google.com/file/d/1QyF-4MDbp2V0A3ARdKYBaa7gxtVef0BB/view?usp=sharing",
         "source": "https://drive.google.com/drive/folders/1RJSWg935up-GkQael8Ui07g7hGaEBFyx?usp=sharing"
-    }
+    },
+    {
+        "problem": "C05",
+        "problem_name": "Create a Daily To-Do List Web App",
+        "problem_url": "https://bits.acicts.lk/task/500",
+        "solution": "./C05/index.html",
+        "source": "https://github.com/Infroid-Coder/BITS-25-Submissions/tree/main/C05"
+    },
 ]
