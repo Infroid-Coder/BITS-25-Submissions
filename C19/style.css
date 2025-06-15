@@ -1,0 +1,99 @@
+@font-face{
+    font-family: urbanist;
+    src: url(./fonts/Urbanist-VariableFont_wght.ttf);
+}
+
+body{
+    background: linear-gradient(-45deg, black, rgb(0, 41, 53));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+*{
+    font-family: urbanist;
+}
+
+#header{
+    text-align: center;
+    padding: 20px 0px;
+}
+#logo{
+    width: 100px;
+}
+#restaurant-name{
+    color: white;
+    margin: 0px;
+    margin-top: 10px;
+    font-size: 40px;
+}
+#slogan{
+    color: rgb(163, 163, 163);
+    font-style: italic;
+    margin-top: 7px;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.menu-category{
+    width: 85%;
+    margin: 0 auto;
+    background: rgba(13, 47, 61, 0.674);
+    padding: 15px 25px;
+    margin-bottom: 25px;
+}
+.category-title{
+    color: rgb(0, 255, 106);
+    font-size: 22px;
+    margin-bottom: 50px;
+}
+.menu-item{
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    color: white;
+    margin-bottom: 35px;
+}
+.menu-item:hover .dish-name, .menu-item:hover .dish-price{
+    text-shadow: 0px 0px 20px white;
+}
+.menu-item:hover .connector{
+    background: rgba(0, 255, 106, .6);
+}
+.dish-name, .dish-price{
+    font-size: 18px;
+    font-weight: 600;
+    margin: auto;
+    transition: .2s;
+}
+.dish-price{
+    padding: 0px 10px;
+}
+.connector{
+    width: 90%;
+    margin: auto;
+    height: 3px;
+    background: rgba(0, 255, 106, 0.17);
+    border-radius: 100px;
+    transition: .2s;
+}
+.vege-indicator-div{
+    background: green;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: inline-grid;
+}
+.vege-indicator{
+    margin: auto;
+}
+.vege-dish{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-gap: 5px;
+}
+
+@media screen and (max-width: 370px){
+    .connector{
+        visibility: hidden;
+    }
+}
