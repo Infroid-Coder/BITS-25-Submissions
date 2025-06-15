@@ -24,7 +24,7 @@ function makeTaskElem(taskText, isDone = false, fullTaskList, fallback, taskList
     removeBtn.onclick = () => {
         fullTaskList[i] = null;
         taskList.removeChild(wrapper);
-        if(taskList.childElementCount === 1) fallback.style.display = "block";
+        if(taskList.childElementCount === 1) fallback.style.display = "grid";
     }
     return {
         elem: wrapper,
@@ -35,7 +35,7 @@ function makeTaskElem(taskText, isDone = false, fullTaskList, fallback, taskList
 let input = document.getElementById("task-input");
 let addBtn = document.getElementById("add-to-list");
 let taskList = document.getElementById("task-list");
-let fallback = document.getElementById("fallback");
+let fallback = document.getElementById("fallback-div");
 
 let currentTasks = [];
 if(localStorage.toDoListTasks){
@@ -57,7 +57,7 @@ if(currentTasks.length > 0){
         taskList.appendChild(taskElem.elem);
     });
 }
-if(taskList.childElementCount === 1) fallback.style.display = "block";
+if(taskList.childElementCount === 1) fallback.style.display = "grid";
     
 input.addEventListener("keydown", e => {
     if(e.key === "Enter" && !e.shiftKey && !e.ctrlKey && !e.altKey && !e.metaKey){
@@ -70,7 +70,7 @@ addBtn.onclick = () => {
         currentTasks.push({val: inputVal, done: 0});
         taskList.appendChild(makeTaskElem(inputVal, false, currentTasks, fallback, taskList, currentTasks.length-1).elem);
         input.value = "";
-        if(getComputedStyle(fallback).display === "block") fallback.style.display = "none";
+        if(getComputedStyle(fallback).display === "grid") fallback.style.display = "none";
     }
 }
 
