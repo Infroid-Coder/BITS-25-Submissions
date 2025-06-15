@@ -66,10 +66,7 @@ body{
     transform: rotate(90deg);
 }
 #task-list{
-    /* height: calc(100vh - 250px); */
     height: 100%;
-    display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(min-content, max-content));
     overflow-y: auto;
 }
 #task-list::-webkit-scrollbar{
@@ -80,10 +77,15 @@ body{
     border-radius: 200px;
 }
 #fallback{
-    margin: auto;
     color: gray;
-    grid-row: 1 / -1;
+    text-align: center;
+    margin: auto;
+}
+#fallback-div{
     display: none;
+    height: 100%;
+    width: 100%;
+    display: grid;
 }
 .task-div{
     width: 80%;
@@ -93,7 +95,7 @@ body{
     grid-column-gap: 10px;
     height: min-content;
     border-bottom: solid 1px rgb(49, 49, 49);
-    padding: 15px 0px;
+    padding: 25px 0px;
     margin-bottom: 10px;
 }
 .task{
