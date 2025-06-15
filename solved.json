@@ -68,5 +68,12 @@
         "problem_url": "https://bits.acicts.lk/task/500",
         "solution": "./C05/index.html",
         "source": "https://github.com/Infroid-Coder/BITS-25-Submissions/tree/main/C05"
+    },
+    {
+        "problem": "C19",
+        "problem_name": "Restaurant Menu Page",
+        "problem_url": "https://bits.acicts.lk/task/1900",
+        "solution": "./C19/index.html",
+        "source": "https://github.com/Infroid-Coder/BITS-25-Submissions/tree/main/C19"
     }
 ]
