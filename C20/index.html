@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>BITS'25 | C20</title>
+</head>
+<body>
+    <div id="outer-wrapper">
+        <div id="program-wrapper">    
+            <div id="sentence-wrapper">
+                <p id="sentence"></p>
+            </div>
+            <div id="timer-wrapper">
+                <div id="timer">
+                    <p id="mins">00</p>
+                    <p class="separator">:</p>
+                    <p id="secs">00</p>
+                    <p class="separator">:</p>
+                    <p id="msecs">00</p>
+                </div>
+            </div>
+            <div id="input-wrapper">
+                <div id="input-wrapper">
+                    <textarea id="input"></textarea>
+                    <button id="start">Start</button>
+                    <button id="stop">Stop</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popup-wrapper">
+        <div id="popup">
+            <div id="detail-wrapper">
+                <div id="detail-sentence-wrapper">
+                    <p id="detail-sentence"></p>
+                </div>
+                <div id="time-div">
+                    <div id="time-div-content">
+                        <div id="time">
+                            <p id="o-mins">00</p>
+                            <p class="o-separator">:</p>
+                            <p id="o-secs">00</p>
+                            <p class="o-separator">:</p>
+                            <p id="o-msecs">00</p>
+                        </div>
+                        <p id="time-label">Time</p>
+                    </div>
+                </div>
+                <div id="wpm-div">
+                    <div id="wpm-div-content">
+                        <p id="wpm">0</p>
+                        <p id="wpm-label">WPM</p>
+                    </div>
+                </div>
+                <div id="accuracy-div">
+                    <div id="accuracy-div-content">
+                        <p id="accuracy">0%</p>
+                        <p id="accuracy-label">Accuracy</p>
+                    </div>
+                </div>
+                <button id="restart">Restart</button>
+            </div>
+        </div>
+    </div>
+    <div id="backdrop"></div>
+    
+    <a href="https://github.com/Infroid-Coder/BITS-25-Submissions/tree/main/C20">
+        <img src="../_img/github.png" alt="Github Logo" id="github-logo">
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

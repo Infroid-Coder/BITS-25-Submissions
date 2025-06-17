@@ -1,0 +1,282 @@
+@font-face{
+    font-family: urbanist;
+    src: url(./fonts/Urbanist-VariableFont_wght.ttf);
+}
+
+body{
+    background: linear-gradient(-45deg, black, rgb(0, 41, 53));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+*{
+    font-family: urbanist;
+}
+
+#outer-wrapper{
+    width: 100%;
+    height: 97.5vh;
+    display: grid;
+}
+#program-wrapper{
+    width: 100%;
+    margin: auto;
+}
+#sentence-wrapper{
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    background: rgb(22, 70, 86);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+#sentence{
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+}
+#input-wrapper{
+    margin: auto;
+    text-align: center;
+}
+#input-wrapper{
+    width: 70%;
+    margin: 0 auto;
+}
+#input{
+    padding: 15px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    width: calc(100% - 50px);
+    font-size: 17px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background: rgb(26, 79, 99);
+    color: white;
+    resize: none;
+    height: 70px;
+}
+#input::placeholder{
+    color: rgba(255, 255, 255, 0.346);
+}
+#start, #stop, #restart{
+    padding: 5px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: .2s;
+}
+#start:disabled, #stop:disabled{
+    opacity: .7;
+}
+#start{
+    background: rgb(34, 171, 84);
+}
+#stop{
+    background: rgb(30, 77, 92);
+}
+#restart{
+    background: rgb(255, 42, 42);
+    margin: 0 auto;
+    grid-column: 1 / -1;
+    margin-top: 10px;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+#restart:hover{
+    background: rgb(255, 68, 68);
+}
+#start:not([disabled]):hover{
+    background: rgb(50, 193, 102);
+}
+#stop:not([disabled]):hover{
+    background: rgb(51, 114, 135);
+}
+#mins, #secs, #msecs, .separator, #o-mins, #o-secs, #o-msecs, .o-separator{
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    margin: 0;
+}
+#timer-wrapper{
+    text-align: center;
+}
+#timer{
+    display: inline-grid;
+    grid-template-columns: 20px max-content 20px max-content 20px max-content;
+    text-align: center;
+    width: max-content;
+    background: grey;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+#time-div, #wpm-div, #accuracy-div{
+    background: rgb(60, 131, 172);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    text-align: center;
+    display: grid;
+}
+#time-div-content, #wpm-div-content, #accuracy-div-content{
+    margin: auto;
+    display: grid;
+    grid-template-rows: 1fr max-content;
+}
+#time{
+    display: grid;
+    grid-template-columns: repeat(5, max-content);
+    margin: 0 auto;
+    width: fit-content;
+}
+#time, #wpm, #accuracy{
+    color: white;
+    margin: 10px 0px;
+}
+#time-label, #wpm-label, #accuracy-label{
+    color: white;
+    margin: 0;
+}
+#backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    display: none;
+}
+#popup-wrapper{
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: none;
+    margin: auto;
+}
+#popup{
+    display: grid;
+    animation-name: popup;
+    animation-duration: .4s;
+    margin: auto;
+    height: fit-content;
+}
+#detail-wrapper{
+    display: grid;
+    margin: auto;
+    grid-gap: 10px;
+    margin-top: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    width: fit-content;
+}
+#detail-sentence-wrapper{
+    padding: 30px 20px;
+    background: rgb(38, 38, 38);
+    grid-column: 1 / -1;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+#detail-sentence{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin: 0px;
+}
+.wrong-char{
+    background: rgba(255, 44, 44, 0.687);
+}
+
+#github-logo{
+    width: 30px;
+    filter: invert(.7);
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    transition: .2s;
+    cursor: pointer;
+    z-index: 1000;
+}
+#github-logo:hover{
+    filter: invert(1);
+}
+
+@keyframes popup {
+    0%{
+        transform: scale(0);
+    }
+}
+@keyframes popup-out {
+    100%{
+        transform: scale(0);
+    }
+}
+
+@media screen and (max-width: 820px){
+    #input-wrapper{
+        width: 75%;
+    }
+    #input{
+        height: 80px;
+    }
+}
+@media screen and (max-width: 650px){
+    #input-wrapper{
+        width: 85%;
+    }
+    #sentence-wrapper{
+        padding: 20px 30px;
+    }
+}
+@media screen and (max-width: 520px){
+    #detail-sentence-wrapper{
+        width: 75%;
+        padding: 20px;
+    }
+    #time-div, #wpm-div, #accuracy-div{
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 475px){
+    #input-wrapper{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 415px){
+    #detail-wrapper{
+        display: grid;
+        margin: auto;
+        grid-gap: 10px;
+        margin-top: 25px;
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        overflow: scroll;
+    }
+    #accuracy-div{
+        grid-column: 1 / -1;
+    }
+    #detail-sentence-wrapper{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 375px){
+    #input{
+        height: 100px;
+    }
+    #sentence-wrapper{
+        padding: 20px;
+    }
+}
