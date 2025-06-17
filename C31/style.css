@@ -1,0 +1,96 @@
+@font-face {
+    font-family: urbanist;
+    src: url(./fonts/Urbanist-VariableFont_wght.ttf);
+}
+
+
+*{
+    font-family: urbanist;
+}
+body{
+    background: rgb(15, 15, 15);
+}
+
+#program-wrapper{
+    height: 97.5vh;
+    display: grid;
+}
+#program{
+    margin: auto;
+    width: 100%;
+}
+#input-div{
+    margin: 0 auto;
+    text-align: center;
+    width: 75%;
+}
+#input{
+    padding: 20px;
+    margin: 0 auto;
+    background: rgb(45, 45, 45);
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    color: white;
+    resize: none;
+    width: fit-content;
+    display: block;
+    margin-bottom: 15px;
+    width: 50%;
+    height: 40vh;
+}
+#check{
+    background: rgb(0, 130, 43);
+    border: none;
+    font-size: 16px;
+    padding: 10px 40px;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+    transition: .2s;
+}
+#check:hover{
+    background: rgb(0, 153, 51);
+}
+#result-div{
+    width: 200px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgb(1, 180, 90);
+    position: fixed;
+    top: 10px;
+    left: -500px;
+}
+#result{
+    margin: 0px;
+    color: white;
+    font-size: 17px;
+}
+
+@keyframes slidein {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        left: 10px;
+    }
+}
+@keyframes slideout {
+    100%{
+        opacity: 0;
+        left: -500px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    #input{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 500px){
+    #input{
+        width: 85%;
+    }
+}
