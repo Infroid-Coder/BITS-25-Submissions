@@ -89,5 +89,12 @@
         "problem_url": "https://bits.acicts.lk/task/2000",
         "solution": "./C20/index.html",
         "source": "https://github.com/Infroid-Coder/BITS-25-Submissions/tree/main/C20"
+    },
+    {
+        "problem": "C31",
+        "problem_name": "Palindrome Checker",
+        "problem_url": "https://bits.acicts.lk/task/3100",
+        "solution": "./C31/index.html",
+        "source": "https://github.com/Infroid-Coder/BITS-25-Submissions/tree/main/C31"
     }
 ]
