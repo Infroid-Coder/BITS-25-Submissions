@@ -75,5 +75,19 @@
         "problem_url": "https://bits.acicts.lk/task/1900",
         "solution": "./C19/index.html",
         "source": "https://github.com/Infroid-Coder/BITS-25-Submissions/tree/main/C19"
+    },
+    {
+        "problem": "C01",
+        "problem_name": "Create a simple rock paper scissor game",
+        "problem_url": "https://bits.acicts.lk/task/100",
+        "solution": "./C01/index.html",
+        "source": "https://github.com/Infroid-Coder/BITS-25-Submissions/tree/main/C01"
+    },
+    {
+        "problem": "C20",
+        "problem_name": "Typing Speed Tester",
+        "problem_url": "https://bits.acicts.lk/task/2000",
+        "solution": "./C20/index.html",
+        "source": "https://github.com/Infroid-Coder/BITS-25-Submissions/tree/main/C20"
     }
 ]
