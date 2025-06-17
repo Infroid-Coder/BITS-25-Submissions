@@ -96,5 +96,12 @@
         "problem_url": "https://bits.acicts.lk/task/3100",
         "solution": "./C31/index.html",
         "source": "https://github.com/Infroid-Coder/BITS-25-Submissions/tree/main/C31"
+    },
+    {
+        "problem": "C32",
+        "problem_name": "Color Picker Tool",
+        "problem_url": "https://bits.acicts.lk/task/3200",
+        "solution": "./C32/index.html",
+        "source": "https://github.com/Infroid-Coder/BITS-25-Submissions/tree/main/C32"
     }
 ]
