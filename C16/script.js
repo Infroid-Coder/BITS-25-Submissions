@@ -13,13 +13,13 @@ let dateOutput = document.getElementById("date-output");
 
 let hours = 0, mins = 0, secs = 0;
 
+dateOutput.innerText = new Date().toDateString();
+
 function hour24Clock(){
     let date = new Date();
     hours = date.getHours();
     mins = date.getMinutes();
     secs = date.getSeconds();
-
-    dateOutput.innerText = date.toDateString();
 
     hour24Output.innerText = (hours < 10) ? "0" + hours : hours;
     min24Output.innerText = (mins < 10) ? "0" + mins : mins;
