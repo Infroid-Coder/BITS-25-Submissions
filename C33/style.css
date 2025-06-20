@@ -1,0 +1,137 @@
+@font-face {
+    font-family: urbanist;
+    src: url(./fonts/Urbanist-VariableFont_wght.ttf);
+}
+
+
+*{
+    font-family: urbanist;
+}
+body{
+    background: rgb(15, 15, 15);
+}
+
+#program-wrapper{
+    height: 97.5vh;
+    display: grid;
+}
+#program{
+    margin: auto;
+    width: 30%;
+    display: grid;
+    animation: fall-in 1s;
+}
+#input-area{
+    display: grid;
+}
+label{
+    color: white;
+    margin-bottom: 5px;
+}
+input{
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+}
+#calculate{
+    width: 70%;
+    margin: 0 auto;
+    padding: 7px 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+#github-logo{
+    width: 30px;
+    filter: invert(.7);
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    transition: .2s;
+    cursor: pointer;
+    z-index: 1000;
+}
+#github-logo:hover{
+    filter: invert(1);
+}
+#colour-strip{
+    height: 5px;
+    width: 100%;
+    background: white;
+    margin-top: 30px;
+    border-radius: 999px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+#underweight-strip, #normal-strip, #overweight-strip, #obese-strip{
+    width: 100%;
+    height: 100%;
+}
+#underweight-strip{
+    background: rgb(0, 158, 84);
+    border-top-left-radius: 999px;
+    border-bottom-left-radius: 999px;
+} 
+#normal-strip{
+    background: green;
+} 
+#overweight-strip{
+    background: rgb(255, 0, 0);
+} 
+#obese-strip{
+    background: rgb(200, 0, 0);
+    border-top-right-radius: 999px;
+    border-bottom-right-radius: 999px;
+}
+#strip-labels{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    font-size: 1.5vh;
+    color: white;
+}
+#strip-labels p{
+    margin: 0px;
+    margin-top: 7px;
+    /* padding: 0px; */
+}
+#output{
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+@keyframes fall-in {
+    0%{
+        opacity: 0;
+        transform: translateY(-1000%);
+    }
+    40%{
+        transform: translateY(20%);
+    }
+    70%{
+        transform: translateY(-10%);
+    }
+}
+
+@media screen and (max-width: 900px){
+    #program{
+        width: 40%;
+    }
+}
+@media screen and (max-width: 650px){
+    #program{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 450px){
+    #program{
+        width: 70%;
+    }
+}
