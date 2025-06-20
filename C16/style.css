@@ -202,11 +202,6 @@ body{
         width: 0%;
     }
 }
-@keyframes scale-down-and-up{
-    50%{
-        transform: scale(0);
-    }
-}
 @keyframes up-and-down{
     40%{
         transform: translateY(-100vh);
