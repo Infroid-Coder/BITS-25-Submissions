@@ -1,0 +1,254 @@
+@font-face {
+    font-family: urbanist;
+    src: url(./fonts/Urbanist-VariableFont_wght.ttf);
+}
+
+
+*{
+    font-family: urbanist;
+}
+body{
+    background-color: rgb(15, 15, 15);
+}
+
+#program-wrapper{
+    height: 97.5vh;
+    display: grid;
+}
+#program{
+    margin: auto;
+    display: grid;
+    animation-name: fall-in;
+    animation-duration: 1s;
+}
+#clock-24, #clock-12{
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: fit-content;
+    margin: auto;
+    grid-gap: 20px;
+    text-align: center;
+}
+#clock-12{
+    display: none;
+    grid-template-columns: repeat(3, 1fr) max-content;
+}
+.time-box{
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, rgb(0, 136, 45), rgb(0, 65, 150));
+    display: grid;
+    text-align: center;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+#am-pm-box{
+    display: grid;
+}
+#am-pm-output{
+    margin: auto;
+    font-size: 20px;
+}
+.lightmode #am-pm-output{
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+    font-weight: 500;
+}
+.time-output{
+    margin: auto;
+    font-size: 30px;
+    font-weight: 600;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+#mode-switch{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+}
+#hour-24-mode, #hour-12-mode{
+    border: none;
+    padding: 10px;
+    color: white;
+    background: linear-gradient(-45deg, rgb(67, 67, 67), rgb(148, 148, 148));
+    cursor: pointer;
+    background-repeat: no-repeat !important;
+    transition: .4s;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+#hour-12-mode{
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+#hour-12-mode:hover{
+    padding: 10px 20px;
+}
+#hour-24-mode{
+    background: linear-gradient(-45deg, blue, rgb(0, 125, 214));
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+#hour-24-mode:hover{
+    padding: 10px 20px;
+}
+#date-output{
+    color: rgb(158, 158, 158);
+    text-align: center;
+    font-size: 20px;
+    margin-top: 25px;
+    font-weight: 600;
+}
+.lightmode #date-output{
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+    color: black;
+}
+
+#github-logo{
+    width: 30px;
+    filter: invert(.7);
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    transition: .4s;
+    cursor: pointer;
+    z-index: 1000;
+}
+#github-logo:hover{
+    filter: invert(1);
+}
+
+.lightmode{
+    color: black;
+}
+.time-box.lightmode{
+    background: linear-gradient(45deg, rgb(0, 201, 67), rgb(114, 217, 255));
+    color: rgb(255, 255, 255);
+}
+.time-box.lightmode .time-output{
+    font-weight: 900;
+    text-shadow: 0px 0px 10px rgb(0, 0, 0, .2);
+}
+.lightmode #hour-12-mode{
+    background: linear-gradient(-45deg, rgb(113, 113, 113), rgb(189, 189, 189));
+}
+.lightmode #hour-24-mode{
+    background: linear-gradient(-45deg, rgb(46, 46, 255), rgb(9, 153, 255));
+}
+#theme-switch{
+    width: 120px;
+    height: 120px;
+    position: fixed;
+    top: -60px;
+    left: -60px;
+    background: rgb(63, 63, 63);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s;
+}
+#theme-switch:hover{
+    background: rgb(204, 204, 204);
+}
+#light-bg{
+    background: rgb(0, 166, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+}
+@keyframes fall-in {
+    0%{
+        opacity: 0;
+        transform: translateY(-1000%);
+    }
+    40%{
+        transform: translateY(20%);
+    }
+    70%{
+        transform: translateY(-10%);
+    }
+}
+@keyframes switch-go-up{
+    100%{
+        transform: translateY(-200vh);
+    }
+}
+@keyframes switch-come-down{
+    0%{
+        transform: translateY(-100vh);
+    }
+    20%{
+        transform: translateY(20px);
+    }
+    50%{
+        transform: translateY(-40px);
+    }
+}
+@keyframes slide-in{
+    100%{
+        width: 100%;
+    }
+}
+@keyframes slide-out{
+    100%{
+        width: 0%;
+    }
+}
+@keyframes scale-down-and-up{
+    50%{
+        transform: scale(0);
+    }
+}
+@keyframes up-and-down{
+    40%{
+        transform: translateY(-100vh);
+    }
+    55%{
+        transform: translateY(20px);
+    }
+    75%{
+        transform: translateY(-40px);
+    }
+}
+
+@media screen and (max-width: 405px){
+    
+}
+@media screen and (max-width: 405px){
+    .time-box{
+        width: 90px;
+        height: 90px;
+    }
+    .time-output{
+        font-size: 25px;
+    }
+    #hour-24-mode, #hour-12-mode{
+        font-size: 12px;
+    }
+    #clock-24, #clock-12{
+        grid-gap: 10px;
+    }
+}
+@media screen and (max-width: 340px){
+    .time-box{
+        width: 80px;
+        height: 80px;
+    }
+    .time-output{
+        font-size: 22px;
+    }
+    #hour-24-mode, #hour-12-mode{
+        font-size: 11px;
+    }
+    #clock-24, #clock-12{
+        grid-gap: 7px;
+    }
+}
