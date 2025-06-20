@@ -220,9 +220,6 @@ body{
 }
 
 @media screen and (max-width: 405px){
-    
-}
-@media screen and (max-width: 405px){
     .time-box{
         width: 90px;
         height: 90px;
