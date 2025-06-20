@@ -103,5 +103,12 @@
         "problem_url": "https://bits.acicts.lk/task/3200",
         "solution": "./C32/index.html",
         "source": "https://github.com/Infroid-Coder/BITS-25-Submissions/tree/main/C32"
+    },
+    {
+        "problem": "C33,
+        "problem_name": "BMI Calculator",
+        "problem_url": "https://bits.acicts.lk/task/3300",
+        "solution": "./C33/index.html",
+        "source": "https://github.com/Infroid-Coder/BITS-25-Submissions/tree/main/C33"
     }
 ]
